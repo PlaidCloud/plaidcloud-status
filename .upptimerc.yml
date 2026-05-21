@@ -12,16 +12,16 @@ owner: PlaidCloud
 repo: plaidcloud-status
 
 sites:
-  - name: Web App
+  - name: Organization and Workspace Management
     slug: app
     # / 302-redirects to /client/; check the app directly for a clean 200
     url: https://app.plaidcloud.com/client/
 
-  - name: Documentation
+  - name: Documentation Website
     slug: docs
     url: https://docs.plaidcloud.com/
 
-  - name: Website
+  - name: PlaidCloud Website
     slug: website
     url: https://plaidcloud.com/
 
