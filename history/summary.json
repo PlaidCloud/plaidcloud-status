@@ -1,6 +1,6 @@
 [
   {
-    "name": "Web App",
+    "name": "Organization and Workspace Management",
     "url": "https://app.plaidcloud.com/client/",
     "icon": "https://icons.duckduckgo.com/ip3/app.plaidcloud.com.ico",
     "slug": "app",
@@ -10,15 +10,15 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 206,
-    "timeDay": 206,
-    "timeWeek": 206,
-    "timeMonth": 206,
-    "timeYear": 206,
+    "time": 207,
+    "timeDay": 207,
+    "timeWeek": 207,
+    "timeMonth": 207,
+    "timeYear": 207,
     "dailyMinutesDown": {}
   },
   {
-    "name": "Documentation",
+    "name": "Documentation Website",
     "url": "https://docs.plaidcloud.com/",
     "icon": "https://icons.duckduckgo.com/ip3/docs.plaidcloud.com.ico",
     "slug": "docs",
@@ -28,15 +28,15 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 98,
-    "timeDay": 98,
-    "timeWeek": 98,
-    "timeMonth": 98,
-    "timeYear": 98,
+    "time": 90,
+    "timeDay": 90,
+    "timeWeek": 90,
+    "timeMonth": 90,
+    "timeYear": 90,
     "dailyMinutesDown": {}
   },
   {
-    "name": "Website",
+    "name": "PlaidCloud Website",
     "url": "https://plaidcloud.com/",
     "icon": "https://icons.duckduckgo.com/ip3/plaidcloud.com.ico",
     "slug": "website",
@@ -46,11 +46,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 262,
-    "timeDay": 262,
-    "timeWeek": 262,
-    "timeMonth": 262,
-    "timeYear": 262,
+    "time": 281,
+    "timeDay": 281,
+    "timeWeek": 281,
+    "timeMonth": 281,
+    "timeYear": 281,
     "dailyMinutesDown": {}
   }
 ]
