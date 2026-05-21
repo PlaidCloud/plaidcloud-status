@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: PlaidCloud Support
+    url: https://www.plaidcloud.com
+    about: For account or product help, contact support. This repository is for platform status and incident communication only.

@@ -1,0 +1,34 @@
+# PlaidCloud status page configuration — Upptime
+# Docs: https://upptime.js.org/docs/configuration
+#
+# Each `slug` is the stable id used for incident/maintenance issue labels and the
+# maintenance `expectedDown:` list. Don't rename slugs once incidents reference them.
+
+owner: PlaidCloud
+repo: plaidcloud-status
+
+sites:
+  - name: Web App
+    slug: app
+    # / 302-redirects to /client/; check the app directly for a clean 200
+    url: https://app.plaidcloud.com/client/
+
+  - name: Documentation
+    slug: docs
+    url: https://docs.plaidcloud.com/
+
+  - name: Website
+    slug: website
+    url: https://plaidcloud.com/
+
+status-website:
+  cname: status.plaidcloud.com
+  name: PlaidCloud Status
+  introTitle: "PlaidCloud platform status"
+  introMessage: "Live status and incident history for the PlaidCloud platform. Subscribe to the RSS feed or watch this repository for incident updates."
+  # logoUrl: https://...   # TODO (optional): PlaidCloud logo URL
+  navbar:
+    - title: Status
+      href: /
+    - title: PlaidCloud
+      href: https://www.plaidcloud.com
