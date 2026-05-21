@@ -40,6 +40,13 @@ All theming lives in `.upptimerc.yml` under `status-website`:
 
 To re-theme: edit the `css` block / data URIs in `.upptimerc.yml` and push — Setup CI rebuilds and redeploys. Built-in `theme` options: `light`, `dark`, `night`, `ocean`.
 
+**UI customizations applied** (all in `status-website`, with inline comments in `.upptimerc.yml`):
+- Navbar brand text hidden via `.logo div { display: none }` so only the logo shows. The `name` ("PlaidCloud Status") is kept because it drives the browser `<title>`.
+- Footer "powered by Upptime" hidden via `footer { display: none }`. Upptime is MIT — the license is retained in `LICENSE` and MIT requires **no UI attribution**, so this is compliant. **Don't delete `LICENSE`.**
+- `introTitle`: "PlaidCloud Platform Status" (Title Case).
+- Navbar links: Status (`/`) and PlaidCloud (`https://plaidcloud.com`, non-www).
+- Cosmetic: the tiny favicon beside "Web App" 404s (DuckDuckGo can't fetch app.plaidcloud.com's icon). Harmless; set a per-site `icon:` to override if it ever matters.
+
 ## Current state
 
 ✅ **LIVE** at https://status.plaidcloud.com — valid TLS, all three sites monitored and green.
@@ -94,6 +101,17 @@ back to `github.token`):
 | `setup.yml` | on push to `.upptimerc.yml` | full bootstrap (template + response-time + readme + graphs + site + deploy) |
 | `update-template.yml` | daily | sync the Upptime engine from upstream |
 | `updates.yml` | daily | dependency updates |
+
+## Making changes & verifying
+
+The only file you edit by hand is `.upptimerc.yml` (workflow files are auto-synced — see Gotchas).
+
+1. Edit `.upptimerc.yml`, then commit.
+2. **`git pull --rebase origin main` before every push.** The Upptime bot commits to `main` every ~5 min (uptime history, README status table, graphs), so your local branch goes stale fast and a plain push is rejected as non-fast-forward. Rebase, then push.
+3. `git push origin main`. A push that touches `.upptimerc.yml` triggers **Setup CI** (~1.5 min): it rebuilds the Svelte site and deploys to `gh-pages`. (A docs-only push — e.g. this file — does not rebuild.)
+4. Verify ~30–60 s after the build (GitHub Pages CDN lag):
+   - `curl -sk "https://status.plaidcloud.com/?cb=$(date +%s)" | grep -c '<your marker>'` to confirm the change shipped, or
+   - screenshot via Playwright MCP (`browser_navigate` then `browser_take_screenshot`, with a `?cb=` cache-buster). Note: inline `css` lives in the page HTML, so a fresh navigation always gets the latest.
 
 ## Gotchas — read before editing
 
