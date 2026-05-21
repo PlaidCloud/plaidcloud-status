@@ -24,6 +24,22 @@ Three public websites, checked with plain HTTP GET (2xx = up). No custom health 
 | Documentation | `docs` | https://docs.plaidcloud.com/ |
 | Website | `website` | https://plaidcloud.com/ |
 
+## Branding
+
+The status page is themed to match **plaidcloud.com** (palette sourced from the
+`plaidcloud-website` repo, `src/components/CustomStyles.astro`):
+
+- **Palette:** orange `#FF7514`, amber `#FDC20D`, navy `#041E4B`, ink `#101828`, cyan `#2EBDF1`, paper `#F8FAFD`; brand gradient orange→amber.
+- **Font:** Inter (loaded from Google Fonts via `status-website.links`; degrades to system sans if unavailable).
+- **Look:** light page, brand-navy navbar with the white PlaidCloud logo, orange links.
+
+All theming lives in `.upptimerc.yml` under `status-website`:
+- `theme: light` is the base (also supplies the semantic up/down/degraded status colors, which we intentionally leave alone).
+- `css:` overrides the chrome CSS variables (`--body-*`, `--card-*`, `--nav-*`, `--submit-button-*`) with `!important` so they win regardless of cascade order, plus link/nav/selection styling. The full themeable variable list is in the built `global.css` on the `gh-pages` branch.
+- `logoUrl` and `faviconSvg` are **embedded as data URIs** (white logo PNG + favicon SVG) so the page has no external image dependency — important for isolation. Source files: `plaidcloud-website/public/wp-content/uploads/2021/12/PlaidCloudLogo_White.png` and `plaidcloud-website/src/assets/favicons/favicon.svg`.
+
+To re-theme: edit the `css` block / data URIs in `.upptimerc.yml` and push — Setup CI rebuilds and redeploys. Built-in `theme` options: `light`, `dark`, `night`, `ocean`.
+
 ## Current state (as of scaffold)
 
 ✅ Scaffolded from the `upptime/upptime` template (engine @ v1.41.4) and committed locally.
