@@ -40,13 +40,15 @@ All theming lives in `.upptimerc.yml` under `status-website`:
 
 To re-theme: edit the `css` block / data URIs in `.upptimerc.yml` and push — Setup CI rebuilds and redeploys. Built-in `theme` options: `light`, `dark`, `night`, `ocean`.
 
-## Current state (as of scaffold)
+## Current state
 
-✅ Scaffolded from the `upptime/upptime` template (engine @ v1.41.4) and committed locally.
-✅ Monitoring the three public sites above — URLs are confirmed (not placeholders).
-❌ **Not live yet.** The items under "Remaining setup" below must be done before it works.
+✅ **LIVE** at https://status.plaidcloud.com — valid TLS, all three sites monitored and green.
+✅ Engine from the `upptime/upptime` template (v1.41.x); `GH_PAT` secret set; Pages serving from `gh-pages` with the custom domain; branded to plaidcloud.com (see Branding above).
+✅ DNS: explicit `status` CNAME → `plaidcloud.github.io`. **Gotcha for the future:** a wildcard `*.plaidcloud.com → 35.192.209.39` (GCP) was catching `status` and routing it into non-GitHub infra; the explicit CNAME overrides the wildcard. If `status` ever 404s again, check that this explicit record still exists.
+☐ **Enable "Enforce HTTPS"** in [Settings → Pages](https://github.com/PlaidCloud/plaidcloud-status/settings/pages) — the cert is valid now, so this is safe to turn on.
+☐ Optional: Slack notifications (add the `NOTIFICATION_SLACK*` secrets, step 2 below); org-level domain verification to prevent takeover.
 
-## Remaining setup (ordered)
+## Setup steps (completed — kept for reference)
 
 1. **Create `GH_PAT` secret** (Settings → Secrets and variables → Actions). Upptime needs a Personal
    Access Token to commit results, open/close issues, dispatch workflows, and deploy Pages — the
