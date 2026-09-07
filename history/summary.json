@@ -6,18 +6,16 @@
     "slug": "app",
     "status": "up",
     "uptime": "100.00%",
-    "uptimeDay": "99.93%",
-    "uptimeWeek": "99.99%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 180,
-    "timeDay": 165,
-    "timeWeek": 187,
+    "timeDay": 174,
+    "timeWeek": 184,
     "timeMonth": 190,
     "timeYear": 180,
-    "dailyMinutesDown": {
-      "2026-09-06": 1
-    }
+    "dailyMinutesDown": {}
   },
   {
     "name": "Documentation Website",
@@ -31,9 +29,9 @@
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 122,
-    "timeDay": 86,
-    "timeWeek": 135,
-    "timeMonth": 123,
+    "timeDay": 140,
+    "timeWeek": 143,
+    "timeMonth": 124,
     "timeYear": 122,
     "dailyMinutesDown": {}
   },
@@ -48,11 +46,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 162,
-    "timeDay": 113,
-    "timeWeek": 214,
-    "timeMonth": 154,
-    "timeYear": 162,
+    "time": 163,
+    "timeDay": 265,
+    "timeWeek": 228,
+    "timeMonth": 158,
+    "timeYear": 163,
     "dailyMinutesDown": {}
   }
 ]
